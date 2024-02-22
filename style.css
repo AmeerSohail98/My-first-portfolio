@@ -1,0 +1,224 @@
+*{margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;border: none;outline: none;
+    font-family: monospace;}
+    html { font-size: 62.5%; overflow-x: hidden;}
+    .section {background-image: url(wallpaper.jpg);background-repeat: no-repeat;background-size: cover; width: 100%; height: 100vh;background-position: center;
+      position: absolute; }
+      .section:before{ content:''; position:absolute; top:0px; left: 0;width: 100%;height: 100%;background: url(wallpaper.jpg);background-size: 100%;
+        opacity: 0.5;mix-blend-mode: hard-light;} .section:hover:before{ animation: drag .2s linear infinite;}
+        @keyframes drag{ 0%{ background-position:0 0 ;
+        filter: hue-rotate(0deg);}10% {background-position: 5px 0;}20%{background-position: -5px 0;}30%{background-position: 15px 0;}40%{background-position: 5px 0;}
+        50% {background-position: -25px 0;}60% { background-position: -50px 0;}70%{background-position: 0 -20 px;}80% {background-position: -60px -20px;}
+        82% {background-position: 0 0;}100% {background-position: 0 0;filter: hue-rotate(360deg);}}
+       
+.header{position: fixed;top: 1.625rem;left: 0;width: 100%;padding: 2rem 9%;display: flex;justify-content: space-between;align-items: center;
+    z-index: 1000;} 
+.navbar { position: relative;}    
+.navbar a {font-size: 2.4rem; margin-left:4rem ;color: chartreuse;transition: .3s;float: left;} 
+.navbar a:hover { color:aqua; border-radius: 6px; transform: translatex(-5px);}
+#menu-icon{font-size: 4.2rem;color: chartreuse;display: none;box-shadow: 0px 0px 15px chartreuse}
+
+.content{color: #00f508; padding: 1.875rem;font-weight: 0.9rem;font-size: 2.25rem;}  .content h1{position: absolute; top: 20.5rem;left: 25.25rem;} h1 span{animation: animate 3s linear infinite;}
+  h1 span :nth-child(even){animation-delay: 0.3s;}
+  @keyframes animate{0%,18%,20%,50.1%,60%,65.1%, 80%,90%,91.2%{color: #9db09d; text-shadow: none;}18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{ color:#00f508;text-shadow:0 0 10px #00f508,0 0 20px #00f508,0 0 40px #00f508
+0 0 80px #00f508,0 0 160px #00f508,0 0 800px #08fd2100}}
+
+.moving-text{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center;z-index: 1000;} .moving-text h2{
+    font-family:monospace;font-size: 4.5rem;color: chartreuse;font-weight: 200;}
+.moving-text span{ color: chartreuse;}
+
+/*breakpoints*/
+@media (max-width: 1200px){html{font-size: 55%;}}
+@media (max-width: 991px){.header{padding: 2rem 3%;}}
+@media (max-width: 768px){#menu-icon {display: block;}.navbar{ position: absolute;top:100%;left: 0;width: 100%;padding: 1rem 3%;
+background:black;border-top: .1rem solid;box-shadow: 0 .5rem 1rem;display: none;
+} .content {color: #00f508;padding: 1.875rem;font-weight: 0.9rem;font-size: 2.25rem;
+    position: absolute; /* Set position to relative for mobile layout */
+    left: auto; /* Reset left position for mobile layout */
+    top: auto; /* Reset top position for mobile layout */}
+.content h1 {position: static; /* Reset position to static for mobile layout */
+        top: auto; /* Reset top position for mobile layout */
+        left: auto; /* Reset left position for mobile layout */
+        margin-top: 1.5rem; /* Adjust margin for better spacing */}
+.navbar.active{display: block;display: grid;grid-auto-rows: auto;
+    grid-template-columns: 1fr; } .navbar a{display: block;font-size: 2rem;margin: 1rem 0;}
+.home{flex-direction: column;}}
+@media (max-width: 450px){html{font-size: 50%;}} @media (max-width: 365px) {.home-img img {width: 90vw; }}
+
+/*------------------------------------------------------------------About me HTML page-----------------------------------------------------------------------------------------------*/
+
+.Abbg {background-image: url(Aboutwallpaper1.jpg);background-repeat: no-repeat;background-size: cover; width: 100%; height: 100vh;background-position: center;
+font-family:"Lucida Console", "Courier New", monospace ;color: chartreuse; display: flex;justify-content: space-between;align-items: center;padding:1rem 13%;overflow: scroll;}
+img{ height:auto; max-width: 35rem;float: left;border:3px solid #00f508; border-radius: 0.625rem;margin: 0.625rem;} .right{width: 70%;position: relative;} 
+.right h1{ font-size: 3.125rem;color: chartreuse; font-style:oblique;margin: 1.875rem;text-decoration: underline;} .right p{ font-size: 16px;color: chartreuse;margin: 1.2rem;}
+.right ul li{ display: flex; align-items:center;} .address{ display: flex;flex-direction: column;} 
+.address ul li{margin-bottom: 5px;} .address-logo{margin:1.2rem;display: flex;align-items: center; color: black(0, 239, 239);}
+.address .saprater{ margin: 0 0.875rem;} .interests h3{font-size: 3.125rem;font-style:oblique;margin: 1.5rem;text-decoration: underline;}
+.interests ul {width: 80%; display: flex;align-items: center;justify-content: space-between;} .interests li {margin-right: 1.7rem;}
+.interests-logo i {color: chartreuse;} .Myskills h3{font-size: 3.125rem;font-style:oblique;margin: 1.5rem;text-decoration: underline;}
+.Myskills ul {width: 80%; display: flex;align-items: center;justify-content: space-between;} .Myskills li {margin-right: 1.7rem;}
+.Myskills-logo i {color: chartreuse;}
+
+@media (max-width: 1200px){html{font-size: 55%;}img {
+    max-width:  25rem; /* Adjust as needed */
+    float: none; /* Remove floating */
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove border radius */
+    margin: 0; /* Remove margin */}}
+@media (max-width: 991px){.header{padding: 2rem 3%;}img {
+    max-width: 25rem; /* Adjust as needed */
+    float: none; /* Remove floating */
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove border radius */
+    margin: 0; /* Remove margin */} .right {
+        width: 100%; /* Adjust width for responsiveness */
+    }
+
+    .right h1 {
+        font-size: 4rem; /* Adjust font size for smaller screens */
+        margin: 1rem; /* Adjust margin for smaller screens */
+        text-decoration: underline; 
+    }}
+@media (max-width: 768px){#menu-icon {display: block; background-color: black;}.navbar{ position: absolute;top:100%;left: 0;width: 100%;padding: 1rem 3%;
+background: black;border-top: .1rem solid;box-shadow: 0 .5rem 1rem;display: none;} 
+.navbar.active{display: block;display: grid;grid-auto-rows: auto;
+    grid-template-columns: 1fr; box-shadow: 0px 0px 15px chartreuse;} .navbar a{display: block;font-size: 2rem;margin: 1rem 0;}
+    .Abbg {
+        flex-direction: column; /* Change flex direction to stack elements vertically */
+        align-items: center; /* Center items vertically */
+        padding: 1rem; /* Adjust padding for smaller screens */
+      }
+img {
+    max-width:  25rem; /* Adjust as needed */
+    float: none; /* Reset float */
+    margin: 0 auto; /* Center the image horizontally */
+    border: 3px solid #00f508;
+    border-radius: 0.625rem;
+    margin: 0.938rem; /* Keep the same margin */
+}
+.right {
+    width: 100%; /* Adjust width as needed */
+    position: relative;
+    top: 0; /* Reset top positioning */}
+.right h1 {
+    font-size: 4rem; /* Adjust font size as needed */
+    color: chartreuse;
+    font-style: oblique;}
+.right p {
+    font-size: 14px; /* Adjust font size as needed */
+    color: chartreuse;}.address {
+        display: block;
+    }
+    .address ul li {
+        margin-bottom: 10px; /* Increased margin for better spacing on smaller screens */
+    }
+    .address-logo {
+        margin: 1.2rem 0; /* Adjusted margin for better alignment */
+        display: flex;
+        align-items: center;
+        color: black(0, 239, 239);
+    }
+    .address .saprater {
+        margin: 0 0.5rem; /* Adjusted margin for better spacing on smaller screens */
+    }
+    .interests h3 {
+        font-size: 4rem; /* Decreased font size for better readability on smaller screens */
+        font-style: oblique;
+    }
+    .interests ul {
+        width: 100%;
+        display: block;
+        text-align: center;
+}.interests li {margin: 0.5rem 0; }
+.Myskills h3 {
+    font-size: 4rem; /* Decreased font size for better readability on smaller screens */
+    font-style: oblique;
+}
+.Myskills ul {
+    width: 100%;
+    display: block;
+    text-align: center;
+}.Myskills li {margin: 0.5rem 0; }
+}
+@media (max-width: 450px){html{font-size: 50%;}} @media (max-width: 365px) {.home-img img {width: 90vw; }
+img {max-width:  25rem; /* Ensures the image scales to fit the container width */
+    float: none; /* Removes the float property */
+    border: none; /* Removes the border */
+    border-radius: 0; /* Removes the border-radius */
+    margin: 0 auto; /* Centers the image horizontally */
+    display: block; /* Ensures proper rendering as a block element */
+} }
+
+
+
+
+
+
+/*--------------------------------------------------------------contacts html page-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+body{margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;border: none;outline: none;}
+.container{width: 100%;height:100%;background-image: url(peakpx.jpg);background-repeat: no-repeat;background-size: cover;background-position: center;
+    width: 100%;min-height: 100vh;display: flex;justify-content: center;align-items: center;padding: 30px 8%;}
+.container .row{display: flex;justify-content: space-between;width: 100%;max-width: 1100px;}.row section.col{display: flex;flex-direction: column;}
+.row section.left{flex-basis: 35%;min-width: 320px;margin-right: 60px;}.row section.right{flex-basis: 60%;}
+section.left .contactTitle h2{position: relative;font-size: 28px;color:chartreuse;display: inline-block;margin-bottom: 25px;}
+section.left .contactTitle h2::before{content: '';position: absolute;width: 50%;height: 1px;background-color: skyblue;top: 120%;left: 0;}
+section.left .contactTitle h2::after{content: '';position: absolute;width: 25%;height: 3px;background-color: chartreuse;top: calc(120% - 1px);left: 0;}
+section.left .contactTitle p{font-size: 17px;color: chartreuse;letter-spacing: 1px;line-height: 1.2;padding-bottom: 22px;}
+section.left .contactInfo{margin-bottom: 16px;}
+.contactInfo .iconGroup{display: flex;align-items: center;margin: 25px 0px;}
+.iconGroup .icon{width: 45px;height: 45px;border: 2px solid chartreuse;border-radius: 50%;margin-right: 8px;position: relative;}
+.iconGroup .icon i{font-size: 20px;color: chartreuse;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.iconGroup .details span{display: block;color: chartreuse;font-size: 18px;}.iconGroup .details span:nth-child(1){text-transform: uppercase;color: black;text-shadow: 0 0 5px chartreuse,0 0 10px chartreuse,0 0 20px chartreuse,0 0 40px chartreuse,0 0 80px chartreuse,0 0 160px chartreuse;}
+section.left .socialMedia{display: flex;justify-content: flex-start;align-items: center;flex-wrap: wrap;margin: 22px 0px 20px;}
+.socialMedia a{width: 35px;height: 35px;text-decoration: none;text-align: center;margin-right: 15px;border-radius: 5px;background-color: rgb(45, 24, 24);transition: 0.4s;}
+.socialMedia a i{color: chartreuse;font-size: 18px;line-height: 35px;border: 1px solid transparent;transition-delay: 0.4s;}
+.socialMedia a:hover{transform: translateY(-5px);background-color: black;color: chartreuse;border: 1px solid chartreuse;}
+.socialMedia a:hover i{color: chartreuse;}
+/* Code for the right section (column) */
+.row section.right .messageForm{display: flex;justify-content: space-between;flex-wrap: wrap;padding-top: 30px;}
+.row section.right .inputGroup{margin: 18px 0px;position: relative;}.messageForm .halfWidth{flex-basis: 48%;}
+.messageForm .fullWidth{flex-basis: 100%;}.messageForm input, .messageForm textarea{width: 100%;font-size: 18px;padding: 2px 0px;
+background-color: transparent;color: #ddd;border: none;border-bottom: 2px solid chartreuse;outline: none;}
+.messageForm textarea{resize: none;height: 220px;display: block;}textarea::-webkit-scrollbar{width: 5px;}textarea::-webkit-scrollbar-track{background-color: black;border-radius: 15px;}
+textarea::-webkit-scrollbar-thumb{background-color: chartreuse;border-radius: 15px;}
+.inputGroup label{position: absolute;left: 0;bottom: 4px;color: chartreuse;font-size: 18px;transition: 0.4s;pointer-events: none;}
+.inputGroup:nth-child(4) label{top: 2px;}.inputGroup input:focus ~ label, .inputGroup textarea:focus ~ label,.inputGroup input:valid ~ label, .inputGroup textarea:valid ~ label
+{transform: translateY(-30px);font-size: 16px;}
+.inputGroup button{padding: 8px 16px;font-size: 18px;background-color: chartreuse;color: black;border: 1px solid transparent;border-radius: 25px;
+	outline: none;cursor: pointer;box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);transition: 0.4s;}
+.inputGroup button:hover{background-color: black;color: chartreuse;box-shadow: 0px 0px 15px chartreuse;border: 1px solid chartreuse;}
+@media(max-width: 1100px){.messageForm .halfWidth{flex-basis: 100%;}}
+@media(max-width: 900px){.container .row{flex-wrap: wrap;}.row section.left, .row section.right{flex-basis: 100%;margin: 0px;}}
+
+
+
+/*------------------------------------------------------------Education Section----------------------------------------------------------------------*/
+.trunk{width: 100%;padding: 35px 10%;width: 100%;min-height: 100vh;background-image:url(kali-linux4.jpg);display: flex;justify-content: center;align-items: center;}.trunk{padding-right: calc(10% - 30px);}main.row{display: grid;grid-template-columns: 1fr 1fr;grid-column-gap: 20px; margin-top: 50px;}
+.col header.title{font-family: "Lucida Console", "Courier New", monospace;color: chartreuse;padding: 0px 0px 20px 30px;}
+.col .contents{padding: 0px 30px;border-left: 2px solid chartreuse;}
+.col .contents .box{position: relative;padding: 20px;border: 1px solid chartreuse;background-color: black;cursor: pointer;transition: all 0.4s;
+margin-bottom: 20px;}.col .contents .box:hover{box-shadow: 0px 3px 12px 0px chartreuse;border: 1px solid transparent;}
+.col .contents .box::before{content: '';position: absolute;width: 16px;height: 16px;border-radius: 50%;right: calc(100% + 22px);top: 0;background-color: chartreuse;border: 2px solid chartreuse;}
+.box h4{position: relative;color: chartreuse;font-size: medium;}.box h3{font-size: 19px;padding: 10px 0px 6px;font-family: "Lucida Console", "Courier New", monospace;
+color: chartreuse;}.box p{line-height: 1.2;color: chartreuse;font-size: 17px;}
+@media(max-width: 768px){main.row{grid-template-columns: 1fr;}.row .col:nth-child(2){margin-top: 30px;}}
+
+
+
+
+/*---------------------------------------------------------------------Projects section-----------------------------------------------------------------*/
+*{margin: 0;padding: 0;box-sizing: border-box;}a{text-decoration: none;}ul{list-style: none;}body{font-family: "Lucida Console", "Courier New", monospace;background-color: rgb(0, 0, 0);}
+#project{display: flex;justify-content: center;align-items: center;flex-direction: column;margin: 50px 0px;}.project-heading{margin-top: 20px;display: flex;flex-direction: column;}
+.project-heading h3{font-size: 4.7rem;font-weight: 600;text-transform: uppercase;}.project-heading span{font-size: 2.5rem;} .project-heading h3, .project-heading span{color:chartreuse;}
+.project-filter{display: flex;justify-content: center;align-items: center;border:1px solid chartreuse;border-style:dashed; flex-wrap: wrap;margin: 20px;}
+.project-filter li{margin: 10px;padding: 5px 20px;color:chartreuse;text-shadow: 0px 0px 15px chartreuse; font-size: 1.5rem;letter-spacing: 0.5px;font-weight: 400;cursor: pointer;user-select: none;}
+.project-filter-active{color:black;background-color: green;}
+.project-container{display: flex;justify-content: center;align-items: center;flex-wrap: wrap;max-width: 1200px;margin: auto;}
+.lightboxjs-link{width: 330px;padding: 15px;border:1px solid chartreuse;margin: 20px;}.lightboxjs-link img{width: 100%;height: 100%;overflow: hidden;border-radius: 5px;}
+.lightboxjs-link p {margin-top: 10px; text-align: center; color: chartreuse;font-size: large;}
+@media(max-width:740px){.project-filter{background-color:black; border:1px solid chartreuse;}.project-filter-active{color:black;background-color: green; border: 1px solid aquamarine;}
+.lightboxjs-link{width: 80%;}}
+
+@media(max-width:550px){.project-heading h3{font-size:1.8rem;}}
+
+

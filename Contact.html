@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta content="Am33r sohail" name="author">
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/favicon.ico">
+    <link href="favicon_io/favicon.ico" rel="icon">
+    <title>Contact</title>
+
+<!--box icons toggle button (hamburger menu)-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Lci94BiMHm2zB1qZ9",
+      });
+   })();
+</script>
+
+<!--custom css-->    
+<link rel="stylesheet" href="style.css">
+</head>
+    <!--header design-->
+    <header class="header">
+        <a href=""></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html"title="">Home</a>
+            <a href="About me.html"title="">Aboutme</a>
+            <a href="Education.html"title="">Education</a>
+            <a href="Projects.html"title="">Projects</a>
+            <a href="Contact.html"title="">Contact</a>    
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+            <main class="row">
+
+                <!--------Left section column starts------------------>
+                <section class="col left">
+                    <div class="contactTitle">
+                        <h2>Get In Touch</h2>
+                        <p>Let's collaborate, learn, and grow together in the fascinating field of cybersecurity.</p>
+                    </div>
+                    <!-------------contact info------------------------>
+                    <div class="contactInfo">
+                        <div class="iconGroup">
+                            <div class="icon">
+                                <i class='bx bx-mobile-alt bx-lg'></i>
+                            </div>
+                            <div class="details">
+                                <span>Phone</span>
+                                <span>+91 8186039725</span>
+                            </div>
+                        </div>
+                        <div class="iconGroup">
+                            <div class="icon">
+                                <i class='bx bxl-gmail bx-lg'></i>
+                            </div>
+                            <div class="details">
+                                <span>Email</span>
+                                <span>ameersohailsheik@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="iconGroup">
+                            <div class="icon">
+                                <i class='bx bxs-location-plus bx-lg'></i>
+                            </div>
+                            <div class="details">
+                                <span>Location</span>
+                                <span>Andhrapradesh,India</span>
+                            </div>
+                        </div>
+                    </div>
+                <!----------------Social Media-------------------------->
+                <div class="socialMedia">
+                    <a href="https://www.linkedin.com/in/sheik-ameer-sohail-552574209?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Brj7X46K1QZ%2B%2F7wHgrzl7AQ%3D%3D"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/AmeerSohail98"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/sohailsheik9?igsh=MzkzbDRqNmFjb2My"><i class='bx bxl-instagram'></i></a>
+                    <a href="mailto:ameersohailsheik@gmail.com"><i class='bx bxl-google'></i></a>
+                    <a href="https://discord.gg/nfX4XAs9"><i class='bx bxl-discord-alt'></i></a>
+                </div>
+                </section>
+                <!--------Left section column ends--------------------->
+                <!--------Right section column starts------------------>
+                <section class="col right">
+                    <form class="messageForm">
+                        <div class="inputGroup halfWidth">
+                            <input type="text" id="name" name="" required="required">
+                            <label>Your Name</label>
+                        </div>
+                        <div class="inputGroup halfWidth">
+                            <input type="email" id="email" name="" required="required">
+                            <label>Email</label>
+                        </div>
+                        <div class="inputGroup fullWidth">
+                            <input type="text"  id="subject" name="" required="required">
+                            <label>Subject</label>
+                        </div>
+                        <div class="inputGroup halfWidth">
+                            <textarea id="message" required="required"></textarea>
+                            <label>Say Something</label>
+                        </div>
+                        <div class="inputGroup halfWidth">
+                            <button type="submit" onclick="sendMail()">Send Message</button>
+                        </div>
+                    </form>
+                </section>
+                <!---------Right section column ends-------------------->
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+        
